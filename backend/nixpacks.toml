@@ -1,9 +1,0 @@
-# Nixpacks build para el backend Django
-[phases.setup]
-nixPkgs = ["python312", "gcc"]
-
-[phases.install]
-cmds = ["pip install -r backend/requirements.txt"]
-
-[start]
-cmd = "cd backend && python manage.py migrate --noinput && python manage.py collectstatic --noinput && gunicorn centro.wsgi --bind 0.0.0.0:$PORT"
