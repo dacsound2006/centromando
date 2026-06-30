@@ -79,6 +79,7 @@ else:
         }
     }
 
+print(">>> DATABASE_URL presente:", bool(os.getenv('DATABASE_URL')), "| HOST:", DATABASES['default'].get('HOST'))
 AUTH_PASSWORD_VALIDATORS = []
 LANGUAGE_CODE = 'es-co'
 TIME_ZONE = 'America/Bogota'
